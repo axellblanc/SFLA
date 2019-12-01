@@ -15,7 +15,7 @@ An optimization algorithm derived from observing the movement of frogs while the
 - Inside each memeplexe, the worst frog tries to improve its position, which improves the overall group and ultimately the colony.
 
 
-This algorithm will be used to optimize a n-dimensional boulders function. In order to plot the results, we will here show how to use it for 2-dimensional data. 
+This algorithm will be used to optimize a n-dimensional boulders function. In order to plot the results, we will here show how to use it for 2-dimensional data. To see how boulders functions they are generated, check sfla.py.
 
 The fitness is the opposite of the boulders function (the lower the function is, the highest the fitness is). 
 
