@@ -244,12 +244,11 @@ def sfla_iter(opt_func,X,Y,Z, frogs=80, dimension=2,  mplx_no=5, mplx_iters=10, 
 def main():
     # Run algorithm
     solun, frogs, memeplexes = sfla(opt_func, 100, 2, 10, 10, 100)
-    print("Optimal Solution (closest to zero): {}".format(solun))
+    print("Optimal Solution: {}".format(solun))
     # Place memeplexes
     for idx, memeplex in enumerate(memeplexes):
         plt.scatter(frogs[memeplex, 0], frogs[memeplex, 1], marker='x', label="memeplex {}".format(idx))
     plt.scatter(solun[0], solun[1], marker='o', label="Optimal Solution")
-    plt.scatter(0, 0, marker='*', label='Actual Solution')
     # Plot properties
     plt.legend()
     plt.xlabel("x-axis")
