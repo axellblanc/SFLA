@@ -36,29 +36,13 @@ The global population of frogs is sorted using the descending order of fitness, 
 We perform a local search for all memeplexes individually for a number of iterations.
 
 
-#### 1_ Inside each memeplexe, move the frog having the worst fitness towards the frog having the best one:
-<br>
-$$ frog_{worst} = frog_{worst} + (random * (frog_{best} - frog_{worst}))$$ 
- 
- With $random$ a randomly selected number from $0$ to $1$  
+#### 1_ Inside each memeplexe, move the frog having the worst fitness towards the frog having the best one
 
 
+#### 2_ If its fitness has not improved: Move the worst frog toward the greatest frog of the overall population
 
 
-
-
-
-
-#### 2_ If its fitness has not improved: Move the worst frog toward the greatest frog of the overall population:
-<br>
-$$ frog_{worst} = frog_{w} + (random * (frog_{greatest} - frog_{worst}))$$ 
-
-With $random$ another randomly selected number from $0$ to $1$  
-
-
-
-#### 3_ If its fitness has not improved: Set the frog to a new randomly selected position.
-<br>
+#### 3_ If its fitness has not improved: Set the frog to a new randomly selected position
 
 
 ### 3. Shuffle the memeplexes
