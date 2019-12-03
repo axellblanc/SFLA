@@ -166,7 +166,7 @@ def sfla(opt_func, frogs=30, dimension=2, mplx_no=5, mplx_iters=10, solun_iters=
             # Rearrange memeplexes
             memeplexes = sort_frogs(frogs, mplx_no, opt_func)
             # Check and select new best frog as the greatest frog
-            new_best_solun = frogs[int(memeplexes[0, 0])]
+            new_best_solun = frogs[int(memeplexes[0, 0])].copy()
             if opt_func(new_best_solun) < opt_func(best_solun):
                 best_solun = new_best_solun
     return best_solun, frogs, memeplexes.astype(int)
@@ -235,6 +235,7 @@ def sfla_iter(opt_func,X,Y,Z, frogs=80, dimension=2,  mplx_no=5, mplx_iters=10, 
             plt.title("Shuffled Frogs")
             plt.contour(X, Y, Z, alpha=.5)
             # Show plot
+            plt.savefig('./images/resultat_'+ str(i) + '.png')
             plt.show()
     return best_solun, frogs, memeplexes.astype(int)
 
